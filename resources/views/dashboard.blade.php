@@ -20,7 +20,11 @@
               <div class="mr-5">{{$quantAlunos}} alunos cadastrado(s)</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">Último Aluno Cadastrado : {{$ultimoAlunoInserido->nome}}</span>
+
+                @isset( $ultimoAlunoInserido->nome)
+                <span class="float-left">Último Aluno Cadastrado : {{$ultimoAlunoInserido->nome}}</span>
+                @endisset
+
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
               </span>
@@ -36,7 +40,9 @@
               <div class="mr-5">{{ $quantCursos }} Curso(s) Cadastrado(s)</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">Último Curso Cadastrado : {{$ultimoCursoInserido->nome}}</span>
+                @isset($ultimoCursoInserido->nome)
+                 <span class="float-left">Último Curso Cadastrado : {{$ultimoCursoInserido->nome}}</span>
+                @endisset
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
               </span>
